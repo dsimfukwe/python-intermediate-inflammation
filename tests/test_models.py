@@ -101,18 +101,10 @@ def test_daily_min(test, expected):
         ([[float('nan'), 1, 1], [1, 1, 1], [1, 1, 1]], [[0, 1, 1], [1, 1, 1], [1, 1, 1]]),
         ([[1, 2, 3], [4, 5, float('nan')], [7, 8, 9]], [[0.33, 0.67, 1], [0.8, 1, 0], [0.78, 0.89, 1]]),
     ])
-def patient_normalise(data):
-    """
-    Normalise patient data from a 2D inflammation data array.
-
-    NaN values are ignored, and normalised to 0.
-
-    Negative values are rounded to 0.
-    """
-    maxima = np.nanmax(data, axis=1)
-    with np.errstate(invalid='ignore', divide='ignore'):
-        normalised = data / maxima[:, np.newaxis]
-    normalised[np.isnan(normalised)] = 0
-    normalised[normalised < 0] = 0
-    return normalised
+def test_patient_normalise(test, expected):
+    """Test normalisation works for arrays of one and positive integers.
+       Assumption that test accuracy of two decimal places is sufficient."""
+    from inflammation.models import patient_normalise
+    npt.assert_almost_equal(patient_normalise(np.array(test)), np.array(expected), decimal=2)    
+...
 #
