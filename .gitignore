@@ -16,3 +16,7 @@
 # Virtual environments
 venv/
 .venv/
+
+#additional
+Additional/
+patients.json
