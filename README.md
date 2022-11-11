@@ -1,17 +1,147 @@
-# Introduction
+# Inflam
 
-This is a template software project repository used by the [Intermediate Research Software Development Skills In Python](https://github.com/carpentries-incubator/python-intermediate-development).
+![Continuous Integration build in GitHub Actions](https://github.com/dsimfukwe/python-intermediate-inflammation/workflows/CI/badge.svg?branch=main)
 
-## Purpose
+Inflam is a data management system written in Python that manages trial data used in clinical inflammation studies.
 
-This repository is intended to be used as a code template which is copied by learners at [Intermediate Research Software Development Skills In Python](https://github.com/carpentries-incubator/python-intermediate-development) workshops.
-This can be done using the `Use this template` button towards the top right of this repo's GitHub page.
+## Main features
 
-This software project is not finished, is currently failing to run and contains some code style issues. It is used as a starting point for the course - issues will be fixed and code will be added in a number of places during the course by learners in their own copies of the repository, as course topics are introduced.
+Here are some key features of Inflam:
 
-## Tests
+- Provide basic statistical analyses over clinical trial data
+- Ability to work on trial data in Comma-Separated Value (CSV) format
+- Generate plots of trial data
+- Analytical functions and views can be easily extended based on its Model-View-Controller architecture
 
-Several tests have been implemented already, some of which are currently failing.
-These failing tests set out the requirements for the additional code to be implemented during the workshop.
+## Prerequisites
 
-The tests should be run using `pytest`, which will be introduced during the workshop.
+Inflam requires the following Python packages:
+
+- [NumPy](https://www.numpy.org/) - makes use of NumPy's statistical functions
+- [Matplotlib](https://matplotlib.org/stable/index.html) - uses Matplotlib to generate statistical plots
+
+The following optional packages are required to run Inflam's unit tests:
+
+- [pytest](https://docs.pytest.org/en/stable/) - Inflam's unit tests are written using pytest
+- [pytest-cov](https://pypi.org/project/pytest-cov/) - Adds test coverage stats to unit testing
+
+## Installation/deployment
+
+Clone the repository and install the requirements:
+
+- git clone https://github.com/dsimfukwe/python-intermediate-inflammation.git
+- cd python-intermediate-inflammation
+- pip install -r requirements.txt
+
+## Basic usage
+
+This Software for managing patient data in our imaginary hospital.
+Run the program at the terminal using python3
+
+- patient data passed as a csv file of daily inflamation (rows for each patient data)
+- select a view use the option --view (options: visualize, )
+- select patient use option --patient (options: intger representing each patient)
+
+Example usage:
+
+python3 inflammation-analysis.py --view visualize --patient 5 data/inflammation-01.csv
+
+
+
+## Contributing:
+
+This is an open source project. Contributions are welcome. Contact us if you find any bugs or would like to contribute to improve the code base or add new features.
+
+## Contact information/getting help: 
+
+Contant us on mastu@ukaea.uk
+
+## Credits/Acknowledgements:
+
+https://codimd.carpentries.org/ukaea-int-soft-dev-20221103#-Breakout-Start-from-the-Top2
+
+
+## Licence:
+
+GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+  The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+the GNU General Public License is intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.  We, the Free Software Foundation, use the
+GNU General Public License for most of our software; it applies also to
+any other work released this way by its authors.  You can apply it to
+your programs, too.
+
+  When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+them if you wish), that you receive source code or can get it if you
+want it, that you can change the software or use pieces of it in new
+free programs, and that you know you can do these things.
+
+  To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights.  Therefore, you have
+certain responsibilities if you distribute copies of the software, or if
+you modify it: responsibilities to respect the freedom of others.
+
+  For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received.  You must make sure that they, too, receive
+or can get the source code.  And you must show them these terms so they
+know their rights.
+
+  Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+giving you legal permission to copy, distribute and/or modify it.
+
+  For the developers' and authors' protection, the GPL clearly explains
+that there is no warranty for this free software.  For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be attributed erroneously to
+authors of previous versions.
+
+  Some devices are designed to deny users access to install or run
+modified versions of the software inside them, although the manufacturer
+can do so.  This is fundamentally incompatible with the aim of
+protecting users' freedom to change the software.  The systematic
+pattern of such abuse occurs in the area of products for individuals to
+use, which is precisely where it is most unacceptable.  Therefore, we
+have designed this version of the GPL to prohibit the practice for those
+products.  If such problems arise substantially in other domains, we
+stand ready to extend this provision to those domains in future versions
+of the GPL, as needed to protect the freedom of users.
+
+  Finally, every program is threatened constantly by software patents.
+States should not allow patents to restrict development and use of
+software on general-purpose computers, but in those that do, we wish to
+avoid the special danger that patents applied to a free program could
+make it effectively proprietary.  To prevent this, the GPL assures that
+patents cannot be used to render the program non-free.
+
+  The precise terms and conditions for copying, distribution and
+modification follow.
+
+                       TERMS AND CONDITIONS
+
+  0. Definitions.
+
+  "This License" refers to version 3 of the GNU General Public License.
+
+  "Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+  "The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
